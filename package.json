@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/david-gagne/pogggo/issues"
   },
-  "homepage": "https://github.com/david-gagne/pogggo#readme"
+  "homepage": "https://github.com/david-gagne/pogggo#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
