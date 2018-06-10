@@ -1,0 +1,12 @@
+section.hero {
+    background-image: url("../images/hero-image.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.hero-body {
+    background-color: rgba(33, 33, 33, 1);
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+

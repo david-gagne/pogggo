@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.static('views'));
 
 app.get("/", function(request, response) {
-    response.send('Landing Page!'); 
+    response.sendFile('index.html');
 });
 
 
