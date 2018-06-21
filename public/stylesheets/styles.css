@@ -4,7 +4,7 @@ section.hero {
     background-size: cover;
 }
 
-.hero .navbar {
+#landingPageNavbar {
     background-color: rgba(33, 33, 33, 1);
     transition-property: background-color;
     transition-duration: 3s;
@@ -19,4 +19,34 @@ div.hero-body {
     transition-property: background-color;
     transition-duration: 3s;
 }
+
+#hero-title {
+    font-family: 'Work Sans', sans-serif;
+}
+#hero-subtitle {
+    font-family: 'Taviraj', serif;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1087px) {
+    .navbar, .navbar-menu, .navbar-start, .navbar-end {
+        align-items: stretch;
+        display: flex;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 1087px) {
+    .navbar-end {
+        flex-grow: 1;
+        flex-shrink: 0;
+        box-shadow: none;
+        justify-content: flex-end;
+    }
+}
+
 
