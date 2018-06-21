@@ -8,6 +8,23 @@ app.get("/", function(request, response) {
     response.sendFile('index.html');
 });
 
+app.get("/libraries", function(request, response) {
+
+    let options = {
+        root: 'views',
+        dotfiles: 'ignore'
+      };
+
+    response.sendFile('libraries.html', options, function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Sent libraries.html!");
+        }
+    });
+
+});
+
 
 app.listen(3000, function() {
     console.log("Server started on port 3000!");

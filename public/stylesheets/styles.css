@@ -1,4 +1,4 @@
-section.hero {
+#landingPageHeroSection {
     background-image: url("../images/hero-image.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@ section.hero {
     background-color: inherit;
 }
 
-div.hero-body {
+#landingPageHeroBody {
     background-color: rgba(33, 33, 33, 1);
     transition-property: background-color;
     transition-duration: 3s;
@@ -25,6 +25,10 @@ div.hero-body {
 }
 #hero-subtitle {
     font-family: 'Taviraj', serif;
+}
+
+#librariesPageFilter > select {
+    color: rgba(33, 33, 33, 1);   
 }
 
 /* Media Queries */
@@ -46,6 +50,13 @@ div.hero-body {
         flex-shrink: 0;
         box-shadow: none;
         justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    #librariesPageFilter {
+        margin-top: 10px;
+        margin-left: 10px;
     }
 }
 
