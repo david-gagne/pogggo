@@ -10,7 +10,7 @@
     transition-duration: 3s;
 }
 
-.navbar-menu > div > a:hover {
+.navbar-menu>div>a:hover {
     background-color: inherit;
 }
 
@@ -23,21 +23,28 @@
 #hero-title {
     font-family: 'Work Sans', sans-serif;
 }
+
 #hero-subtitle {
     font-family: 'Taviraj', serif;
 }
 
-#librariesPageFilter > select {
-    color: rgba(33, 33, 33, 1);   
+div.column>.card {
+    cursor: pointer;
 }
 
 /* Media Queries */
+
 @media screen and (max-width: 1087px) {
-    .navbar, .navbar-menu, .navbar-start, .navbar-end {
+    .navbar,
+    .navbar-menu,
+    .navbar-start,
+    .navbar-end {
         align-items: stretch;
         display: flex;
-        width: -moz-available;          /* WebKit-based browsers will ignore this. */
-        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: -moz-available;
+        /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;
+        /* Mozilla-based browsers will ignore this. */
         width: fill-available;
         box-shadow: none;
         background-color: transparent;
@@ -59,5 +66,3 @@
         margin-left: 10px;
     }
 }
-
-
