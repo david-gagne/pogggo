@@ -28,10 +28,6 @@
     font-family: 'Taviraj', serif;
 }
 
-div.column>.card {
-    cursor: pointer;
-}
-
 /* Media Queries */
 
 @media screen and (max-width: 1087px) {
