@@ -32,7 +32,7 @@ app.get("/libraries/:id", function (request, response) {
         dotfiles: 'ignore'
     };
 
-    response.sendFile('libraries.html', options, function (err) {
+    response.sendFile('library.html', options, function (err) {
         if (err) {
             console.log(err);
         } else {
