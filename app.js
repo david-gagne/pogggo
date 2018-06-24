@@ -42,6 +42,23 @@ app.get("/libraries/:id", function (request, response) {
 
 });
 
+app.get("/signup", function (request, response) {
+    
+    let options = {
+        root: 'views',
+        dotfiles: 'ignore'
+    };
+
+    response.sendFile('signup.html', options, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Sent signup page!");
+        }
+    });
+
+});
+
 
 app.listen(3000, function () {
     console.log("Server started on port 3000!");

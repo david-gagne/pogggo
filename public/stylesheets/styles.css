@@ -32,6 +32,32 @@ a {
     color: inherit;
 }
 
+.image.image--circle {
+    border-radius: 50%;
+}
+
+.title--circle {
+    margin-top: 10px;
+}
+
+.columns--slim-form {
+    justify-content: center;
+}
+
+.column--slim-form {
+    margin: 0;
+    max-width: 381px;
+}
+
+.control.control--slim-form {
+    display: flex;
+    justify-content: center;
+}
+
+.terms-notice {
+    font-size: small;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1087px) {
@@ -64,5 +90,12 @@ a {
     #librariesPageFilter {
         margin-top: 10px;
         margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 769px),
+print {
+    .column.is-offset-one-quarter.column.column--slim-form {
+        margin-left: 0;
     }
 }
