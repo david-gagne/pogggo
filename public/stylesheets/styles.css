@@ -45,7 +45,7 @@ a {
 }
 
 .column--slim-form {
-    margin: 0;
+    margin-left: 0;
     max-width: 381px;
 }
 
@@ -56,6 +56,18 @@ a {
 
 .terms-notice {
     font-size: small;
+}
+
+.label.label--password {
+    font-size: small;
+}
+
+.checkbox.checkbox--remember {
+    font-size: smaller;
+}
+
+section.section--login {
+    height: calc(100vh - 233px);
 }
 
 /* Media Queries */

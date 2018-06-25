@@ -43,7 +43,7 @@ app.get("/libraries/:id", function (request, response) {
 });
 
 app.get("/signup", function (request, response) {
-    
+
     let options = {
         root: 'views',
         dotfiles: 'ignore'
@@ -54,6 +54,23 @@ app.get("/signup", function (request, response) {
             console.log(err);
         } else {
             console.log("Sent signup page!");
+        }
+    });
+
+});
+
+app.get("/login", function (request, response) {
+
+    let options = {
+        root: 'views',
+        dotfiles: 'ignore'
+    };
+
+    response.sendFile('login.html', options, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Sent login page!");
         }
     });
 

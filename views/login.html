@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music sharing for the streaming generation - Pogggo</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/styles.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar has-background-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/libraries">
+                <!-- NOTE: Set to published url once live. -->
+                <img src="../images/pogggo-full.png" alt="Pogggo: A music sharing application for the streaming generation." width="112"
+                    height="28">
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <a href="/signup" class="navbar-item has-text-white">
+                    <p>Sign up</p>
+                </a>
+                <a href="/login" class="navbar-item has-text-white">
+                    <p>Log in</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section section--login">
+        <div class="container">
+            <div class="columns columns--slim-form">
+                <div class="column is-half is-offset-one-quarter column--slim-form">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="title is-3 has-text-weight-normal">
+                                Log in
+                            </h3>
+                            <div class="content">
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control has-icons-left has-icons-right">
+                                        <input class="input" type="email">
+                                        <span class="icon is-small is-right is-hidden">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                    </div>
+                                    <p class="help is-danger is-hidden">This email is invalid</p>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Password</label>
+                                    <div class="control">
+                                        <input class="input" type="password">
+                                    </div>
+                                    <a class="has-text-link label label--password has-text-weight-normal">Forgot your password?</a>
+                                </div>
+
+                                <div class="field">
+                                    <div class="control control--slim-form">
+                                        <button class="button is-warning is-rounded is-fullwidth">Log In</button>
+                                    </div>
+                                </div>
+                                <label class="checkbox checkbox--remember">
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <header class="card-header has-background-light">
+                            <p class="card-header-title is-centered has-text-weight-normal">
+                                <span>
+                                    New to Pogggo?
+                                    <a href="/signup" class="has-text-warning has-text-weight-bold">Sign up</a>
+                                </span>
+                            </p>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer has-background-dark">
+        <div class="content has-text-left">
+            <img src="../images/pogggo-full.png" alt="Pogggo: A music sharing application for the streaming generation." width="112"
+                height="28">
+        </div>
+    </footer>
+</body>
+
+</html>
