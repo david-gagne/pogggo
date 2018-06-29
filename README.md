@@ -1,6 +1,6 @@
 # Pogggo - The modern music sharing application
 
-## Backstory
+### Backstory
 For months now I've wanted to build an application that would allow me to quickly and easily share music with friends. My original idea was a website that would enable anyone to share their favorite tunes with a single link. 
 
 I believed that receiving a single URL to a curated library of someone's favorite music would save everyone loads of time:
