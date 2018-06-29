@@ -58,7 +58,7 @@ I've set the server to run on port 3000. So open your favorite browser and go to
 
 If everything was done correctly, you should see something like this:
 
-![Pogggo live](public/images/misc/pogggoReadMe.png)
+![Pogggo live](public/images/pogggoReadMe.png)
 
 And that's it! You can now contribute to the Pogggo build!
 
