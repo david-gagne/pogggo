@@ -12,25 +12,65 @@ Pogggo is a solution to the problem of sharing music in the age of robust stream
 
 ## Getting Started
 
-If you're new to Git, go read this short guide to get started:
+If you're new to Git, I recommend that you go read this short guide:
 
 http://rogerdudler.github.io/git-guide/
 
-Once you've set up your local folder, copy this command into your terminal:
+or watch this video here:
 
-```git clone https://github.com/david-gagne/pogggo.git```
+[Coding Rainbow Git Video](https://youtu.be/_NrSWLQsDL4)
 
+Once you're ready, go ahead and fork this repository like so:
+ 
+![Forking the Pogggo repo on GitHub](https://media.giphy.com/media/QKlIQKzzPoH3Xbe5C2/giphy.gif)
+
+This will create a completely separate copy of the entire Pogggo source code on your GitHub account. This is done so that you can make changes in a sandbox totally isolated from the original code. 
+
+Now go ahead and clone your forked Pogggo code, by opening your terminal and running:
+
+```
+git clone https://github.com/your-username/pogggo.git
+```
+
+__Note__: Be sure to replace the _your-username_ with your actual GitHub account username.
+
+You can find the link to your forked Pogggo repository at the repo page on your account.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+In order for you to be able to run Pogggo on your machine, you'll need the following items:
+
+- Node & The Node Package Manager (NPM)
+
+You can install Node and NPM via the official website here: [Node.js](https://nodejs.org/en/)
+
+Or, you can use the Node Version Manager (NVM). You can find out how to do so here: [NVM](https://github.com/creationix/nvm#install-script) 
+
+Windows users: To install NVM on a Windows machine, you'll need to go here: [NVM for Windows](https://github.com/coreybutler/nvm-windows)
+
+Once you've got Node and Npm installed; in your terminal, navigate to your Pogggo directory and run:
 
 ```
-Give examples
+node app.js
 ```
 
+I've set the server to run on port 3000. So open your favorite browser and go to ``` localhost:3000 ``` 
 
-### Installing
+If everything was done correctly, you should see something like this:
+
+![Pogggo live](public/images/misc/pogggoReadMe.png)
+
+And that's it! You can now contribute to the Pogggo build!
+
+Many thanks,
+
+David 
+@buildpax
+
+
+
+
+<!-- ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -100,4 +140,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Hat tip to anyone whose code was used
 * Inspiration
-* etc
+* etc -->
