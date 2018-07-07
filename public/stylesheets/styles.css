@@ -66,10 +66,6 @@ a {
     font-size: smaller;
 }
 
-section.section--login {
-    height: calc(100vh - 233px);
-}
-
 /* Media Queries */
 
 @media screen and (max-width: 1087px) {
