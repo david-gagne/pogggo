@@ -54,8 +54,16 @@ a {
     justify-content: center;
 }
 
+.card-footer.card-footer--login {
+    margin-top: 30px;
+}
+
 .terms-notice {
     font-size: small;
+}
+
+.terms-notice.terms-notice--login {
+    padding-top: 20px;
 }
 
 .label.label--password {
