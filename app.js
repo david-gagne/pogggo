@@ -1,16 +1,9 @@
 const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-
+const passport = require('passport');
 
 app.use(express.static('public'));
 app.use(express.static('views'));
 
-// body-parser
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 
 app.get("/", function (request, response) {
     response.sendFile('index.html');
