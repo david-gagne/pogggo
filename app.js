@@ -1,36 +1,16 @@
 const express = require('express');
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert'); // This is a node package for unit testing.
+const bodyParser = require('body-parser');
 
-// // Connection URL
-// const url = 'mongodb://localhost:27017';
-
-// // Database Name
-// const dbName = 'pogggo';
-
-// // Use connect method to connect to the server
-// MongoClient.connect(url, function (err, client) {
-//     assert.equal(null, err);
-//     console.log("Connected successfully to server");
-
-//     const db = client.db(dbName);
-
-//     // Insert a single document into the users collection.
-//     db.collection('users').insertOne({
-//         "first_name": "Jonathan",
-//         "last_name": "Smith",
-//         "email": "jsmith@ufl.edu"
-//     }, function (err, r) {
-//         assert.equal(null, err);
-//         assert.equal(1, r.insertedCount);
-
-//         client.close();
-//     });
-// });
 
 app.use(express.static('public'));
 app.use(express.static('views'));
+
+// body-parser
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.get("/", function (request, response) {
     response.sendFile('index.html');
@@ -84,6 +64,10 @@ app.get("/signup", function (request, response) {
             console.log("Sent signup page!");
         }
     });
+
+});
+
+app.post("/signup", function (request, response) {
 
 });
 
