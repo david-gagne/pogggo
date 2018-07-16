@@ -7,15 +7,12 @@ const User = require('./models/user');
 const app = express();
 
 
+// CONFIGURATION
 app.use(express.static('public'));
 app.use(express.static('views'));
 app.use(require('body-parser').urlencoded({
     extended: false
 }));
-
-// ====================
-// Routes
-// ====================
 
 
 app.get("/", function (request, response) {
@@ -57,11 +54,8 @@ app.get("/libraries/:id", function (request, response) {
 });
 
 
-// ====================
-// Authorization routes
-// ====================
 
-// Show register form
+// SHOW SIGN UP FORM
 app.get("/signup", function (request, response) {
 
     let options = {
@@ -79,7 +73,7 @@ app.get("/signup", function (request, response) {
 
 });
 
-// Handle signup logic
+// SIGN UP LOGIC: What to do after user signs up.
 app.post("/signup", function (request, response) {
     response.send("Sent signup form!...Not really");
 });
