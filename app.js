@@ -1,8 +1,21 @@
 const express = require('express');
-const passport = require('passport');
+const mongoose = require('mongoose');
+const User = require('./models/user');
+
+
+// Create a new Express application
+const app = express();
+
 
 app.use(express.static('public'));
 app.use(express.static('views'));
+app.use(require('body-parser').urlencoded({
+    extended: false
+}));
+
+// ====================
+// Routes
+// ====================
 
 
 app.get("/", function (request, response) {
@@ -43,6 +56,12 @@ app.get("/libraries/:id", function (request, response) {
 
 });
 
+
+// ====================
+// Authorization routes
+// ====================
+
+// Show register form
 app.get("/signup", function (request, response) {
 
     let options = {
@@ -60,26 +79,12 @@ app.get("/signup", function (request, response) {
 
 });
 
+// Handle signup logic
 app.post("/signup", function (request, response) {
-
+    response.send("Sent signup form!...Not really");
 });
 
-app.get("/login", function (request, response) {
 
-    let options = {
-        root: 'views',
-        dotfiles: 'ignore'
-    };
-
-    response.sendFile('login.html', options, function (err) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("Sent login page!");
-        }
-    });
-
-});
 
 
 app.listen(3000, function () {

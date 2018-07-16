@@ -56,14 +56,14 @@
                                 <div class="field">
                                     <label class="label">Full Name</label>
                                     <div class="control">
-                                        <input class="input" type="text" placeholder="Ben Whitman" name="user[name]">
+                                        <input class="input" type="text" placeholder="Ben Whitman" name="name">
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <label class="label">Email</label>
                                     <div class="control has-icons-left has-icons-right">
-                                        <input class="input" type="email" placeholder="benwhitman@ufl.edu" name="user[email]">
+                                        <input class="input" type="email" placeholder="benwhitman@ufl.edu" name="email">
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-envelope"></i>
                                         </span>
@@ -75,22 +75,32 @@
                                 </div>
 
                                 <div class="field">
+                                    <label class="label">Username</label>
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="bwhitman97" name="username">
+                                        <span class="icon is-small is-right is-hidden">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="field">
                                     <label class="label">Password</label>
                                     <div class="control">
-                                        <input class="input" type="password" name="user[password]">
+                                        <input class="input" type="password" name="password">
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <label class="label">Re-enter password</label>
                                     <div class="control">
-                                        <input class="input" type="password">
+                                        <input class="input" type="password" name="password">
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <div class="control control--slim-form">
-                                        <button class="button is-warning is-rounded is-fullwidth">Create Account</button>
+                                        <button class="button is-warning is-rounded is-fullwidth" type="submit">Create Account</button>
                                     </div>
                                 </div>
                                 <footer class="card-footer has-text-centered card-footer--login">
