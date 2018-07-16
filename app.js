@@ -1,6 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const User = require('./models/user');
+const express           = require('express'), 
+      mongoose          = require('mongoose'), 
+      User              = require('./models/user');
 
 
 // Create a new Express application
@@ -14,11 +14,12 @@ app.use(require('body-parser').urlencoded({
     extended: false
 }));
 
-
+// SHOW LANDING PAGE
 app.get("/", function (request, response) {
     response.sendFile('index.html');
 });
 
+// SHOW LIBRARIES PAGE
 app.get("/libraries", function (request, response) {
 
     let options = {
@@ -36,6 +37,7 @@ app.get("/libraries", function (request, response) {
 
 });
 
+// SHOW LIBRARY OF A SPECIFIC USER
 app.get("/libraries/:id", function (request, response) {
 
     let options = {
@@ -52,7 +54,6 @@ app.get("/libraries/:id", function (request, response) {
     });
 
 });
-
 
 
 // SHOW SIGN UP FORM
@@ -78,6 +79,30 @@ app.post("/signup", function (request, response) {
     response.send("Sent signup form!...Not really");
 });
 
+
+// SHOW LOG IN FORM
+app.get("/login", function (request, response) {
+
+    let options = {
+        root: 'views',
+        dotfiles: 'ignore'
+    };
+
+    response.sendFile('login.html', options, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Sent login page!");
+        }
+    });
+
+});
+
+
+// LOG IN LOGIC: What to do after user logs in.
+app.post("/signup", function (request, response) {
+    response.send("Sent login form!...Not really");
+});
 
 
 
