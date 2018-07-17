@@ -11,7 +11,8 @@ mongoose.connect("mongodb://localhost/pogggo");
     // This is the form that documents in the MongoDB collection will take   
 let User = mongoose.model("User", new mongoose.Schema({
     name: { type: String, required: true},
-    email: { type: String, required: true},
+    email: { type: String, required: true, unique: true},
+    username: { type: String, required: true, unique: true},
     password: { type: String, required: true}
 }));
 
@@ -112,6 +113,7 @@ app.post("/signup", function (request, response) {
         }
 
         response.send("WELCOME TO YOUR POGGGO MUSIC LIBRARY!");
+        response.redirect("/libraries");
     });
 });
 
