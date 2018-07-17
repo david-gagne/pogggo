@@ -1,6 +1,19 @@
 const express           = require('express'), 
-      mongoose          = require('mongoose'), 
-      User              = require('./models/user');
+      mongoose          = require('mongoose');
+
+
+
+// Connect to MongoDB
+mongoose.connect("mongodb://localhost/pogggo");
+
+
+// Define user model:
+    // This is the form that documents in the MongoDB collection will take   
+let User = mongoose.model("User", new mongoose.Schema({
+    name: { type: String, required: true},
+    email: { type: String, required: true},
+    password: { type: String, required: true}
+}));
 
 
 // Create a new Express application
@@ -76,7 +89,30 @@ app.get("/signup", function (request, response) {
 
 // SIGN UP LOGIC: What to do after user signs up.
 app.post("/signup", function (request, response) {
-    response.send("Sent signup form!...Not really");
+    let options = {
+        root: 'views',
+        dotfiles: 'ignore'
+    };
+
+    // Create a user
+    let user = new User(request.body);
+
+    user.save(function(err) {
+        if (err) {
+            let error = "Something bad happened! Please try again.";
+            
+            if (err.code === 11000) {
+                error = "That email is already in use. Please try another.";
+            }
+
+            return response.sendFile("/signup.html", options, function (err) { 
+                err = error;
+                console.log(error); // Test error message
+            });
+        }
+
+        response.send("WELCOME TO YOUR POGGGO MUSIC LIBRARY!");
+    });
 });
 
 
@@ -100,8 +136,14 @@ app.get("/login", function (request, response) {
 
 
 // LOG IN LOGIC: What to do after user logs in.
-app.post("/signup", function (request, response) {
-    response.send("Sent login form!...Not really");
+app.post("/login", function (request, response) {
+    User.findOne({ email: request.body.email }, function (err, user) {
+        if (err || !user || request.body.password !== user.password) {
+            response.json(request.body);
+        }
+
+        response.send("SUCCESS");
+    });    
 });
 
 
